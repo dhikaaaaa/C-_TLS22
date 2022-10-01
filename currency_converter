@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void menu()
+    {
+        cout << "\nList of currencies that you can convert from IDR : ";
+        cout << "\n \t1. Dollar" << endl;
+        cout << "\t2. Euro" << endl;
+        cout << "\t3. Yuan" << endl;
+    }
+
+int main ()
+ {
+    double dola = 15254, eu = 14901, yua = 2143, idr, a, b, c;
+    int choice;
+    
+    do 
+    {
+        menu();
+        cout << "Please choose : ";
+        cin >> choice;
+        switch (choice)
+        {
+            case 1:
+            cout << "\ninsert your money in IDR: ";
+                cin >> idr;
+                a = idr / dola;
+                cout << idr << " IDR : " << a << " Dollar" << endl;
+                break;
+    
+            case 2:
+                cout << "\ninsert your money in IDR: ";
+                cin >> idr;
+                b = idr / eu;
+                cout << idr << " IDR : " << b << " Euro" << endl;
+                break;
+    
+            case 3:
+                cout << "\ninsert your money in IDR: ";
+                cin >> idr;
+                c = idr / yua;
+                cout << idr << " IDR : " << c << " Yuan" << endl;
+                break;
+        }
+        return 0;
+    } 
+    
+    while (choice < 4);
+    return 0;
+ }
